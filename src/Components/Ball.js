@@ -9,7 +9,7 @@ class Ball extends Component {
             x: 10
         }
         this.handleClick = this.handleClick.bind(this)
-        this.handleKeyDown = this.handleKeyDown.bind(this)
+        this.handleKeyPress = this.handleKeyPress.bind(this)
     }
 
     handleClick() {
@@ -19,7 +19,7 @@ class Ball extends Component {
         console.log(this.state.color)
     }
 
-    handleKeyDown() {
+    handleKeyPress() {
         console.log("Event: ")
         this.setState({
             x: this.state.x+5
@@ -30,11 +30,12 @@ class Ball extends Component {
     render() {
         return (
                 <Rect
+                    tabIndex="0"
                     x={this.state.x} y={10} width={50} height={50}
                     fill={this.state.color}
                     shadowBlur={10}
                     onClick={this.handleClick}
-                    onKeyDown={this.handleKeyDown}
+                    onKeyPress={this.handleKeyPress}
                 />
             )
     }
