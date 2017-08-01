@@ -1,41 +1,40 @@
 import React, { Component } from 'react'
-import Konva, { Circle } from 'react-konva'
+import { Circle } from 'react-konva'
 
 class Ball extends Component {
     constructor(...args) {
         super(...args)
         this.state = {
             color: 'green',
-            x: 25,
+            radius: 30,
         }
         this.handleClick = this.handleClick.bind(this)
-        this.handleKeyPress = this.handleKeyPress.bind(this)
     }
 
     handleClick() {
         this.setState({
-            color: 'blue'
-        })
-        console.log(this.state.color)
-    }
-
-    handleKeyPress() {
-        console.log("Event: ")
-        this.setState({
+            color: 'blue',
             x: this.state.x+5
         })
-        console.log("Moved along x +5")
+    }
+
+    componentDidMount() {
+      this.setState({x: this.state.radius,
+                     y: this.state.radius
+      })
     }
 
     render() {
         return (
                 <Circle
                     tabIndex="0"
-                    x={this.state.x} y={10} width={50} height={50}
+                    x={this.state.x} 
+                    y={this.state.y} 
+                    width={this.state.radius * 2}  
+                    height={this.state.radius * 2}
                     fill={this.state.color}
                     shadowBlur={10}
                     onClick={this.handleClick}
-                    onKeyPress={this.handleKeyPress}
                 />
             )
     }
