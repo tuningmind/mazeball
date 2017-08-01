@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Konva, { Rect } from 'react-konva'
+import Konva, { Circle } from 'react-konva'
 
 class Ball extends Component {
     constructor(...args) {
         super(...args)
         this.state = {
             color: 'green',
-            x: 10
+            x: 25,
         }
         this.handleClick = this.handleClick.bind(this)
         this.handleKeyPress = this.handleKeyPress.bind(this)
@@ -29,7 +29,7 @@ class Ball extends Component {
 
     render() {
         return (
-                <Rect
+                <Circle
                     tabIndex="0"
                     x={this.state.x} y={10} width={50} height={50}
                     fill={this.state.color}

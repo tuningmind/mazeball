@@ -13,8 +13,11 @@ body {
 
 header {
   background-color: #ac4e00;
-  height: 12vh;
+  height: 10vh;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main {
@@ -26,5 +29,8 @@ main {
 footer {
   background-color: #a9805d;
   height: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
