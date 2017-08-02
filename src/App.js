@@ -10,12 +10,8 @@ class App extends Component {
   updateCanvas() {
     // the ball component gets informed that an asdw key was pressed 
   }
-
-  componentWillMount() {
-    this.eventEmitter = new EventEmitter()
-    this.eventEmitter.addListener("ballMove", () => {
-      console.log("ballMove")
-    })
+  onKeyPressed(e) {
+    console.log(e.key)
   }
 
   render() {
@@ -24,13 +20,10 @@ class App extends Component {
         <header>
           <h2>mazeball</h2>
         </header>
-        <main
-           onKeyPress={(e) => {
-             console.log("Before ballMove event")
-             this.eventEmitter.emit("ballMove")
-             console.log("After ballMove event")
-           }}
-          >
+        <main>
+          <div
+           onKeyDown={(e) => this.onKeyPressed(e)}
+           >Hello world</div>
           {/* I am an actual comment*/}
           <Stage width={700} height={700}>
             <Layer>
