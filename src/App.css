@@ -1,11 +1,11 @@
 
 body {
   background-color: #000;
-  
 }
 
 .app {
   text-align: center;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,7 +28,7 @@ main {
 
 footer {
   background-color: #a9805d;
-  height: 6vh;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

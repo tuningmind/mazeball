@@ -14,7 +14,7 @@ class Ball extends Component {
     handleClick() {
         this.setState({
             color: 'blue',
-            x: this.state.x+5
+            x: this.state.x+10
         })
     }
 

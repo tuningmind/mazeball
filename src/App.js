@@ -23,16 +23,16 @@ class App extends Component {
         <main>
           <div
            onKeyDown={(e) => this.onKeyPressed(e)}
-           >Hello world</div>
+           >Click the ball to move it right</div>
           {/* I am an actual comment*/}
-          <Stage width={700} height={700}>
+          <Stage width={700} height={300}>
             <Layer>
               <Ball />
             </Layer>
           </Stage>
         </main>
         <footer>
-          <p>Hello.</p>
+          <p>More mazeball coming soon!</p>
         </footer>
       </div>
     );
